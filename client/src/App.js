@@ -28,7 +28,7 @@ const cache = new InMemoryCache({
   }
 })
 const client = new ApolloClient({
-  uri : "https://serverproject-ufy9.onrender.com", 
+  uri : "https://serverproject-ufy9.onrender.com/graphql", 
   cache
 })
 
