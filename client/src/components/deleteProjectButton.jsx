@@ -1,4 +1,4 @@
-import { useMutation, useQuery } from "@apollo/client"
+import { useMutation } from "@apollo/client"
 import { DELETE_PROJECT } from "../mutations/projectMutations"
 import { GET_PROJECTS } from "../queries/projectQueries";
 import { FaTrash } from "react-icons/fa";
