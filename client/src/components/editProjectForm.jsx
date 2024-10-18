@@ -2,12 +2,10 @@ import { useMutation } from "@apollo/client"
 import { useState } from "react"
 import { EDIT_PROJECT } from "../mutations/projectMutations"
 import { GET_SINGLE_PROJECT } from "../queries/projectQueries"
-import { useNavigate } from "react-router-dom"
 
 
 
 const EditProjectForm  =({project}) =>{
-    const navigate = useNavigate()
     const [name , setName] = useState(project.name)
     const [description , setDescription] = useState(project.description)
     const [status , setStatus] = useState()
@@ -18,7 +16,6 @@ const EditProjectForm  =({project}) =>{
         refetchQueries : [{query : GET_SINGLE_PROJECT , 
             variables : {id : project.id}
         }], 
-        // onCompleted : () => navigate("/")
     })
 
     const submitForm = (e) =>{
